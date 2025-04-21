@@ -1,15 +1,22 @@
 version: "3.9"
 services:
   assetto_server:
-    image: mbround18/assetto-server
+    image: germanrcuriel/assetto-corsa-server
     container_name: ac_server
-    ports:
-      - "9600:9600/udp"
-      - "9601:9601/udp"
-      - "8081:8081"
-    volumes:
-      - ./cfg:/assetto/server/cfg
-      - ./content:/assetto/server/content
     environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto
+      - STEAM_USER=your_steam_username
+      - STEAM_PASSWORD=your_steam_password
+      - AC_SERVER_NAME=Coolify AC Server
       - AC_PASSWORD=yourpassword
-      - ADMIN_PASSWORD=youradminpass
+      - AC_ADMIN_PASSWORD=youradminpass
+    ports:
+      - "8081:8081"
+      - "9600:9600"
+      - "9600:9600/udp"
+      - "50041:50041"
+      - "50042:50042"
+    volumes:
+      - ./ac_data:/steamapps
