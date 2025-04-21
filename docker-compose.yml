@@ -7,8 +7,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Toronto
-      - STEAM_USER=your_steam_username
-      - STEAM_PASSWORD=your_steam_password
+      - STEAM_USER=coolifysaqi
+      - STEAM_PASSWORD=Ea9CE5mAYvPUEfd
       - AC_SERVER_NAME=Coolify AC Server
       - AC_PASSWORD=yourpassword
       - AC_ADMIN_PASSWORD=youradminpass
